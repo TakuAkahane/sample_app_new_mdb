@@ -1,0 +1,49 @@
+// Your custom variables
+// font family
+$roboto-font-path: "../assets/font/roboto/" !default;
+
+// font size
+$font-size-default: .875rem; /* 14px */
+$font-size-extralarge: 1.25rem; /* 20px */
+$font-size-large: 1.125rem; /* 18px */
+$font-size-middle: 1rem; /* 16px */
+$font-small: .75rem; /* 12px */
+
+// retter-spacing
+$space-small: -0.045rem;
+
+// colors
+$default-font-color: rgba(0, 0, 0, .87);
+$default-background-color: #eee;
+$input-label-default: $default-font-color;
+$font-color-grey: rgba(84, 110, 122, .87);
+$color-thin-grey: rgba(0, 0, 0, .54);
+$green-base: rgba(0, 150, 136, .87);
+$dropdown-item-font-color: #595959;
+$footer-background-color: #78909c;
+$green-light: #00d2c3;
+$light-green-hover: #bdf1ec;
+
+// spacing
+$space-5: 2rem;
+$space-6: 3rem;
+
+// buttons
+$border-radius-base: .25rem;
+
+// badge
+$badge-pill-padding-x: .5rem;
+$badge-pill-padding-y: .1rem;
+
+// forms
+$label-font-size: $font-size-middle;
+$label-active-font-size: $font-size-middle;
+
+// dropdown
+$dropdown-item-font-size: $font-size-default;
+
+// hover opacity
+$default-hover-opacity: .7;
+
+// table width //
+$table-th-extrasm-min-width: 4rem !default;
