@@ -1,5 +1,6 @@
 // Your custom variables
 // font family
+$notosans-font-path: "../assets/font/notosans/" !default;
 $roboto-font-path: "../assets/font/roboto/" !default;
 
 // font size
@@ -18,6 +19,7 @@ $default-background-color: #eee;
 $input-label-default: $default-font-color;
 $font-color-grey: rgba(84, 110, 122, .87);
 $color-thin-grey: rgba(0, 0, 0, .54);
+$icon-thin-grey: rgba(0, 0, 0, 0.38);
 $green-base: rgba(0, 150, 136, .87);
 $dropdown-item-font-color: #595959;
 $footer-background-color: #78909c;

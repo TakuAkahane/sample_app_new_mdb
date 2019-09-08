@@ -8145,6 +8145,41 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 .contact-section .contact .fas, .contact-section .contact .fab, .contact-section .contact .far { color: #6b89a5; }
 
 /* Robot */
+/* Myyugo */
+@font-face { font-family: MyYugo; font-weight: normal; font-display: auto; src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular"); }
+
+@font-face { font-family: MyYugo; font-weight: bold; font-display: auto; src: local("YuGothic-Bold"), local("Yu Gothic"); }
+
+/* MyHiragino */
+@font-face { font-family: 'HiraginoCustom'; font-weight: 100; font-display: auto; src: local("HiraginoSans-W1"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 200; font-display: auto; src: local("HiraginoSans-W2"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 300; font-display: auto; src: local("HiraginoSans-W3"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 400; font-display: auto; src: local("HiraginoSans-W3"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 500; font-display: auto; src: local("HiraginoSans-W5"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 600; src: local("HiraginoSans-W6"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 700; font-display: auto; src: local("HiraginoSans-W6"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 800; font-display: auto; src: local("HiraginoSans-W7"), local("Hiragino Sans"); }
+
+@font-face { font-family: 'HiraginoCustom'; font-weight: 900; font-display: auto; src: local("HiraginoSans-W8"), local("Hiragino Sans"); }
+
+/* MySansSerif */
+@font-face { font-family: MySansSerif; font-weight: normal; font-display: auto; src: local("HelveticaNeue"), local("Helvetica Neue"), local("Helvetica"), local("Arial"); }
+
+@font-face { font-family: MySansSerif; font-weight: 700; font-display: auto; src: local("HelveticaNeueBold"), local("HelveticaNeue-Bold"), local("Helvetica Neue Bold"), local("HelveticaBold"), local("Helvetica-Bold"), local("Helvetica Bold"), local("Arial Bold"); }
+
+@font-face { font-family: MySansSerif; font-weight: 900; font-display: auto; src: local("HelveticaNeueBlack"), local("HelveticaNeue-Black"), local("Helvetica Neue Black"), local("HelveticaBlack"), local("Helvetica-Black"), local("Helvetica Black"), local("Arial Black"); }
+
+/* Noto Sans Japanese */
+@font-face { font-family: 'Noto Sans Japanese'; font-style: normal; font-weight: 300; font-display: auto; src: local("Noto Sans CJK JP Regular"), local("NotoSansCJKjp-Regular"), local("NotoSansJP-Regular"), url("../assets/font/notosans/SubNotoSansJP_regular.woff2") format("woff2"), url("../assets/font/notosans/SubNotoSansJP_regular.woff") format("woff"); }
+
+/* Roboto */
 @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 300; font-display: auto; src: url("../assets/font/roboto/Roboto-Light.woff2") format("woff2"), url("../assets/font/roboto/Roboto-Light.woff") format("woff"); }
 
 @font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; font-display: auto; src: url("../assets/font/roboto/Roboto-Medium.woff2") format("woff2"), url("../assets/font/roboto/Roboto-Medium.woff") format("woff"); }
@@ -8211,6 +8246,39 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 
 .ml-6, .mx-6 { padding-left: 3rem !important; }
 
+:root { font-family: "Noto Sans Japanese", "Roboto", sans-serif, 'HiraginoCustom', MyYugo; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons { vertical-align: bottom; cursor: pointer; }
+
+.material-icons.material-icons--outline { font-family: 'Material Icons Outline'; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+
+.material-icons.md-white { color: #fff; }
+
+.md-grey .material-icons, .material-icons.md-grey { color: rgba(0, 0, 0, 0.38); }
+
+.material-icons.md-blue-grey { color: #546e7a; }
+
+.material-icons.md-dark.md-inactive, .md-grey .material-icons.md-inactive { color: #2bbbad; }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: white; }
+
+.material-icons.md-light.md-inactive { color: #2bbbad; }
+
+.material-icons.md-16 { font-size: 16px; }
+
+.material-icons.md-18 { font-size: 18px; }
+
+.material-icons.md-36 { font-size: 36px; }
+
+.material-icons.md-48 { font-size: 48px; }
+
+/* user icon */
+.user-icon { width: 1.5rem; height: 1.5rem; border-radius: 50%; }
+
 /* 日付カレンダー icon */
 .calender-icon { cursor: default; }
 
@@ -8227,6 +8295,12 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 
 /* clear */
 .clear:after { clear: both; content: ''; display: block; }
+
+.align-center { align-items: center; }
+
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (min-width: 1440px) { .double-nav .button-collapse { display: block; position: inherit; } }
 
 /* overflow */
 .overflow-visible { overflow: visible !important; }
@@ -8249,6 +8323,8 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 /* badge */
 .badge-pill { padding: 0.1rem 0.5rem; color: #fff; }
 
+.unread-badge { position: relative; background: #ff825c; width: 20px; height: 20px; line-height: 20px; margin: 0; border-radius: 50%; font-size: 10px; text-align: center; color: #fff; }
+
 /* dropdown menu */
 .dropmenu:hover > .dropdown-menu { display: block !important; }
 
@@ -8265,6 +8341,8 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 
 .dropdown-content li.active > a, .dropdown-content li.active > span, .dropdown-content li:hover > a, .dropdown-content li:hover > span { color: #fff; }
 
+.custom-select:focus { box-shadow: 0 0 0.2rem rgba(0, 188, 174, 0.5); border-color: #00bcae; }
+
 /* 入力項目の横の単位やアイコン */
 .inline-unit-label, .inline-unit-icon { position: absolute; top: 1.2rem; }
 
@@ -8277,6 +8355,10 @@ section.team-section .avatar img.rounded-circle { max-width: 150px; }
 
 /* error message */
 .invalid-feedback, .error-text { color: #dc3545; font-size: 0.875rem; margin-top: .5rem; text-indent: .5rem; }
+
+.show-count-over { color: #dc3545; }
+
+.show-count-wrapper-over { background-color: #ffcccc !important; }
 
 /* header */
 body header a { color: rgba(0, 0, 0, 0.87); }
@@ -8324,6 +8406,8 @@ body a { color: #009688; }
 body a:hover { color: #2bbbad; }
 
 body a:hover img { opacity: 0.7; }
+
+body a:not([href]):not([tabindex]):focus, body a:not([href]):not([tabindex]):hover { color: #2bbbad; }
 
 /* form */
 :focus { outline: 0; }
@@ -8400,6 +8484,11 @@ main .grabient { min-height: 50vh; }
 .title h1 { color: #fff; }
 
 @media (max-width: 767px) { .title h1 { font-size: 1.8rem; } }
+
+/* Screen follow button */
+.fix_right_button { position: fixed; right: 0; bottom: 0; z-index: 99; background: rgba(0, 0, 0, 0.7); }
+
+@media screen and (max-width: 768px) { .fix_right_button { position: fixed; right: 0; bottom: 0; z-index: 99; background: rgba(0, 0, 0, 0); } }
 
 /* footer */
 footer { width: 100%; height: auto; background-color: #78909c; }

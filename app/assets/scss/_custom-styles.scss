@@ -1,4 +1,109 @@
 /* Robot */
+
+// font //
+/* Myyugo */
+@font-face {
+  font-family: MyYugo;
+  font-weight: normal;
+  font-display: auto;
+  src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular");
+}
+@font-face {
+  font-family: MyYugo;
+  font-weight: bold;
+  font-display: auto;
+  src: local("YuGothic-Bold"), local("Yu Gothic")
+}
+
+/* MyHiragino */
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 100;
+  font-display: auto;
+  src: local("HiraginoSans-W1"), local("Hiragino Sans")
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 200;
+  font-display: auto;
+  src: local('HiraginoSans-W2'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 300;
+  font-display: auto;
+  src: local('HiraginoSans-W3'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 400;
+  font-display: auto;
+  src: local('HiraginoSans-W3'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 500;
+  font-display: auto;
+  src: local('HiraginoSans-W5'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 600;
+  src: local('HiraginoSans-W6'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 700;
+  font-display: auto;
+  src: local('HiraginoSans-W6'), local('Hiragino Sans')
+}
+@font-face{
+  font-family: 'HiraginoCustom';
+  font-weight: 800;
+  font-display: auto;
+  src: local('HiraginoSans-W7'), local('Hiragino Sans')
+}
+@font-face {
+  font-family: 'HiraginoCustom';
+  font-weight: 900;
+  font-display: auto;
+  src: local('HiraginoSans-W8'), local('Hiragino Sans')
+}
+
+/* MySansSerif */
+@font-face {
+  font-family: MySansSerif;
+  font-weight: normal;
+  font-display: auto;
+  src: local('HelveticaNeue'), local('Helvetica Neue'), local('Helvetica'), local('Arial');
+}
+@font-face {
+  font-family: MySansSerif;
+  font-weight: 700;
+  font-display: auto;
+  src: local('HelveticaNeueBold'), local('HelveticaNeue-Bold'), local('Helvetica Neue Bold'), local('HelveticaBold'), local('Helvetica-Bold'), local('Helvetica Bold'), local('Arial Bold');
+}
+@font-face {
+  font-family: MySansSerif;
+  font-weight: 900;
+  font-display: auto;
+  src: local('HelveticaNeueBlack'), local('HelveticaNeue-Black'), local('Helvetica Neue Black'), local('HelveticaBlack'), local('Helvetica-Black'), local('Helvetica Black'), local('Arial Black');
+}
+
+/* Noto Sans Japanese */
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+  src: local('Noto Sans CJK JP Regular'),
+       local('NotoSansCJKjp-Regular'),
+       local('NotoSansJP-Regular'),
+       url("#{$notosans-font-path}SubNotoSansJP_regular.woff2") format('woff2'),
+       url("#{$notosans-font-path}SubNotoSansJP_regular.woff") format('woff')
+}
+
+/* Roboto */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -131,6 +236,41 @@
   padding-left: $space-6 !important;
 }
 
+// root //
+:root {
+  font-family: "Noto Sans Japanese", "Roboto", sans-serif, 'HiraginoCustom', MyYugo;
+}
+// icon //
+/* Rules for using icons as black on a light background. */
+.material-icons {
+  vertical-align: bottom;
+  cursor : pointer;
+}
+.material-icons.material-icons--outline {
+  font-family: 'Material Icons Outline';
+}
+.material-icons.md-dark { color: $color-thin-grey; }
+.material-icons.md-white { color: $white-base; }
+.md-grey .material-icons,
+.material-icons.md-grey { color: $icon-thin-grey; }
+.material-icons.md-blue-grey { color: $blue-grey-darken-1; }
+.material-icons.md-dark.md-inactive,
+.md-grey .material-icons.md-inactive { color: $default-color; }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: $default-color; }
+.material-icons.md-16 { font-size: 16px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+/* user icon */
+.user-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
 /* 日付カレンダー icon */
 .calender-icon {
   cursor: default;
@@ -158,6 +298,29 @@
   clear: both;
   content: '';
   display: block;
+}
+
+// align-items //
+// 親要素にd-flexと一緒につけると垂直方向中央に配置できる
+.align-center {
+  align-items: center;
+}
+
+// ellipsis //
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// admin slide menu //
+.double-nav {
+  .button-collapse {
+    @media (min-width: $sidenav-breakpoint) {
+      display: block;
+      position: inherit;
+    }
+  }
 }
 
 /* overflow */
@@ -203,6 +366,18 @@
   padding: $badge-pill-padding-y $badge-pill-padding-x;
   color: $white-base;
 }
+.unread-badge {
+  position: relative;
+  background: #ff825c;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+}
 
 /* dropdown menu */
 .dropmenu {
@@ -213,7 +388,6 @@
     pointer-events: none;
   }
 }
-
 .dropdown-menu {
   a.dropdown-item {
     &.active,
@@ -246,6 +420,12 @@
     }
   }
 }
+.custom-select {
+  &:focus {
+    box-shadow: 0 0 0.2rem rgba(0, 188, 174,.5);
+    border-color: #00bcae;
+  }
+}
 
 /* 入力項目の横の単位やアイコン */
 .inline-unit-label,
@@ -276,6 +456,12 @@
   font-size: $font-size-default;
   margin-top: .5rem;
   text-indent: .5rem;
+}
+.show-count-over {
+  color: $red;
+}
+.show-count-wrapper-over {
+  background-color: #ffcccc !important;
 }
 
 /* header */
@@ -426,6 +612,10 @@ body a:hover {
 
 body a:hover img {
   opacity: $default-hover-opacity;
+}
+body a:not([href]):not([tabindex]):focus,
+body a:not([href]):not([tabindex]):hover {
+  color: $default-color;
 }
 
 /* form */
@@ -649,6 +839,24 @@ main {
     h1{
       font-size: 1.8rem;
     }
+  }
+}
+
+/* Screen follow button */
+.fix_right_button{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, .7);
+}
+@media screen and (max-width: 768px) {
+  .fix_right_button{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0);
   }
 }
 
