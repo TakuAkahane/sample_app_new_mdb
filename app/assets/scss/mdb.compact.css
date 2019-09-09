@@ -8365,6 +8365,8 @@ body header a { color: rgba(0, 0, 0, 0.87); }
 
 body header a:hover, body header a:hover .material-icons { color: #2bbbad; text-decoration: none; }
 
+body header .navbar.scrolling-navbar { padding-top: 22px; padding-bottom: 12px; }
+
 body header .navbar-brand img { width: 9.5rem; vertical-align: baseline; }
 
 body header .header-search-menu.active i, body header .header-search-menu.active a { color: #2bbbad; }
@@ -8375,11 +8377,17 @@ body header .dropdown-menu { left: inherit; top: 50px; }
 
 body header .header-notification .dropdown-menu { right: 0; top: 38px; }
 
+body header .header-notification .notifications-wrapper { overflow-y: scroll; max-height: calc(70vh - 60px); width: 400px; }
+
+body header .header-notification .notifications-wrapper a { white-space: normal; }
+
 body header .dropdown-toggle::after { content: none; }
 
 body header .icon-wrapper { position: relative; float: left; }
 
 body header .icon-wrapper i { width: 40px; text-align: center; vertical-align: middle; }
+
+body header .unread-badge { position: absolute; top: 0; right: 0; }
 
 @media (max-width: 767px) { body header .navbar.scrolling-navbar { padding-bottom: 0; padding-top: 10px; } }
 
@@ -8432,7 +8440,9 @@ input.form-control[type=text], input.form-control[type=date], input.form-control
 
 input.form-control.picker__input { padding: 0.75rem 0.5rem; latter-spacing: -0.045rem; }
 
-.white input.form-control[type=text], .carousel-thumbnails .carousel-indicators .active input.form-control[type=text], .picker__list-item input.form-control[type=text], .picker__box .picker__header .picker__select--month.browser-default input.form-control[type=text], .picker__box .picker__header .picker__select--year.browser-default input.form-control[type=text] { opacity: .38; }
+.white input.form-control[type=text], .carousel-thumbnails .carousel-indicators .active input.form-control[type=text], .picker__list-item input.form-control[type=text], .picker__box .picker__header .picker__select--month.browser-default input.form-control[type=text], .picker__box .picker__header .picker__select--year.browser-default input.form-control[type=text] { background-color: #fff; }
+
+.disabled input.form-control[type=text] { opacity: .38; }
 
 textarea.form-control { border-color: #009688; }
 
@@ -8499,6 +8509,23 @@ footer { width: 100%; height: auto; background-color: #78909c; }
 .card-contet { padding: 1rem; }
 
 .card-footer { background: #fff; padding: 1rem; }
+
+a .card-header:hover { opacity: 0.7; }
+
+a .card-footer:hover { background: #e7fffe; }
+
+/* cardが選択要素になっているもの */
+.card.select-card { color: rgba(0, 0, 0, 0.87); transition: all .3s ease; font-weight: 300; cursor: pointer; }
+
+.card.select-card:hover { opacity: .7; }
+
+.card.select-card.selected { background-color: #00bcae; transition: all .3s ease; }
+
+.card.select-card.selected > * { color: #fff; text-decoration: none; }
+
+.card.select-card.selected span i { color: #fff; transition: all .3s ease; }
+
+.card.select-card td.select-arrow { width: 1rem; text-align: right; }
 
 /* card additional info */
 .additional-information { display: none; position: absolute; width: 100%; background: #fff; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -8615,7 +8642,4 @@ table.table th.cell-thin, table.table td.cell-thin { padding-top: .5rem; padding
 table.table .th-extrasm { min-width: 4rem; }
 
 /* IE対応*/
-input::-ms-clear { visibility: hidden; }
-
-/* IE対応 */
 input::-ms-clear { visibility: hidden; }

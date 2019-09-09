@@ -475,6 +475,12 @@ body {
         text-decoration: none;
       }
     }
+    .navbar {
+      &.scrolling-navbar {
+        padding-top: 22px;
+        padding-bottom: 12px;
+      }
+    }
     .navbar-brand {
       img {
         width: 9.5rem;
@@ -502,6 +508,14 @@ body {
         right: 0;
         top: 38px;
       }
+      .notifications-wrapper {
+        overflow-y: scroll;
+        max-height: calc(70vh - 60px);
+        width: 400px;
+        a {
+          white-space: normal;
+        }
+      }
     }
     .dropdown-toggle {
       &::after {
@@ -516,6 +530,11 @@ body {
         text-align:center;
         vertical-align:middle;
       }
+    }
+    .unread-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -706,6 +725,13 @@ input.form-control {
 .white {
   input.form-control {
     &[type=text] {
+      background-color: $white-base;
+    }
+  }
+}
+.disabled {
+  input.form-control {
+    &[type=text] {
       opacity: .38;
     }
   }
@@ -883,6 +909,50 @@ footer {
 .card-footer {
   background: $white-base;
   padding: 1rem;
+}
+a {
+  .card-header {
+    &:hover {
+      opacity: $default-hover-opacity;
+    }
+  }
+  .card-footer {
+    &:hover {
+      background: $card-footer-hover-color;
+    }
+  }
+}
+/* cardが選択要素になっているもの */
+.card{
+  &.select-card {
+    color: rgba(0, 0, 0, 0.87);
+    transition: all .3s ease;
+    font-weight: 300;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+    &.selected {
+      background-color: #00bcae;
+      transition: all .3s ease;
+      > * {
+        color: #fff;
+        text-decoration: none;
+      }
+      span {
+        i {
+          color: #fff;
+          transition: all .3s ease;
+        }
+      }
+    }
+    td {
+      &.select-arrow {
+        width: 1rem;
+        text-align: right;
+      }
+    }
+  }
 }
 
 /* card additional info */
@@ -1167,9 +1237,4 @@ table {
 /* IE対応*/
 input::-ms-clear {
   visibility: hidden;
-}
-
-/* IE対応 */
-input::-ms-clear{
-  visibility:hidden;
 }
